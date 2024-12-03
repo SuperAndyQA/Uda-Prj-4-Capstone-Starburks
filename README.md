@@ -1,4 +1,4 @@
-## Starbucks Capstone Challenge: Using Starbucks app user data to predict effective offers
+# Starbucks Capstone Challenge
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -6,19 +6,21 @@
 3. [Project Motivation](#project-motivation)
 4. [File Descriptions](#files)
 5. [Results](#results)
-6. [Licensing, Authors, Acknowledgements](#license)
+6. [Acknowledgements](#license)
 
 ### Installation <a name="installation"></a>
-To run this project, the most crucial library required is the Python version of the Anaconda Distribution, which installs all the necessary packages for analysis and model building.
+This project requires the newest Python version of Anaconda Distribution, which installs all the necessary packages for analysis and model building.
 
 ### Introducing a Dataset <a name="dataset-introduction"></a>
-The dataset provided here is a simulation of customer behavior on the Starbucks rewards mobile app. Starbucks sends out offers to users of the mobile app every few days, which could either be an advertisement for a drink or an actual offer such as a discount or BOGO. However, not all users receive the same offer, and this presents a challenge that needs to be addressed using this dataset.
+This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. An offer can be merely an advertisement for a drink or an actual offer such as a discount or BOGO (buy one get one free). Not all users receive the same offer, and that is the challenge to solve with this data set.
+ 
 ### Project Motivation <a name="project-motivation"></a>
 This project aims to answer two business questions using the Starbucks rewards mobile app dataset. 
-The first question focuses on identifying the key features that impact the effectiveness of an offer on the app. 
-The second question examines whether the data on offer characteristics and user demographics can predict whether a user will take up an offer. 
 
-To address these questions, three models were created for each of the three offer types: BOGO, discount, and informational.
+1. The first question focuses on identifying the key features and their order of importance that impact the effectiveness of an offer on the app. 
+2. The second question examines whether the data on offer characteristics and user demographics can predict whether a user will take up an offer. 
+
+To address these questions, three models were created for each of the three offer types: BOGO, discount, and informational. The chosen method was Random Forest Classifier which can apply better for the unbalancing state of data.
 
 ### File Descriptions <a name="files"></a>
 This repo contains 4 files.There is a notebook available here to showcase work related to the above questions and wrangling process. There are 3 data files used to address the above qustions
@@ -29,17 +31,17 @@ This repo contains 4 files.There is a notebook available here to showcase work r
 ## Results<a name="results"></a>
 
 As a brief summary of my findings:
-#### i. Question 1 findings:
-The top predictor of offer effectiveness across all three models was found to be membership tenure. The second and third most important features were income and age, with the order varying slightly depending on the offer type. For BOGO and discount offers, the feature importance distribution was relatively equal, while for informational offers, it was more balanced with income being the second most important variable.
+#### I. Question 1:
+Membership tenure was the strongest predictor of offer effectiveness across all three models, followed by income and age, with their importance varying slightly by offer type. In BOGO and discount offers, feature importance was relatively consistent, whereas informational offers showed a more balanced distribution, with income as the second most significant factor.
 
-#### ii. Question 2 findings:
+#### II. Question 2:
 
-Using 3 separate models to predict the effectiveness of each offer type proved to be a good decision, with high accuracy for BOGO and discount models (82.87% for BOGO and 87.38% for discount), while slightly lower accuracy for the informational offers (75.23%). Nonetheless, I consider 75% accuracy to be acceptable in a business context since informational offers do not incur any cost.
+Using separate models for each offer type yielded strong results, with high accuracy for BOGO (83.16%) and discount (86.8%) models, and acceptable accuracy for informational offers (76.47%). The lower accuracy is reasonable since informational offers have no associated costs.
 
-I am satisfied with the 80% and above accuracy for BOGO and discount models since it would be acceptable to present offers to customers in a business setting. Even if the model makes a few misclassifications, the overall revenue increase may justify the errors.
+Accuracy above 80% for BOGO and discount models is satisfactory for business use, as revenue gains from correctly targeted offers can outweigh occasional misclassifications.
 
-All of my results would be published [here](<https://scarlettstarbucks.blogspot.com/2023/05/udacity-data-science-nano-degree.html>)
+I published my finding results in the link [here](<https://scarlettstarbucks.blogspot.com/2023/05/udacity-data-science-nano-degree.html>)
 
-### Licensing, Authors, Acknowledgements, etc.<a name="license"></a>
+### Acknowledgements, etc.<a name="license"></a>
 
-Data for coding project was provided by Udacity.
+Data for implementing this project was provided by Udacity.
