@@ -38,7 +38,7 @@ Membership tenure was the strongest predictor of offer effectiveness across all 
 
 Using separate models for each offer type yielded strong results, with high accuracy for BOGO (83.16%) and discount (86.8%) models, and acceptable accuracy for informational offers (76.47%). The lower accuracy is reasonable since informational offers have no associated costs.
 
-Accuracy above 80% for BOGO and discount models is satisfactory for business use, as revenue gains from correctly targeted offers can outweigh occasional misclassifications.
+Accuracy above 80% for BOGO and discount models is satisfactory for business use, as revenue gains from correctly targeted offers can outweigh occasional misclassifications. Further analysis can be implemented to examine the high rate of ineffective offers for short membership period and successful converion rate peak on range of 500-1,000 days of membership, as well as higher influence of income for range under 50,000 to conversion rate for informational offers.
 
 I published my finding results in the link [here](<https://scarlettstarbucks.blogspot.com/2023/05/udacity-data-science-nano-degree.html>)
 
